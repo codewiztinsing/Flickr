@@ -1,11 +1,9 @@
 {% extends "base.html" %}
-{% block title %}Log-in{% endblock %}
+{% block title %}Logged out{% endblock %}
 {% block content %}
-	<h1>logout</h1>
-	<p>Please, use the following form to log-in:</p>
-	<form method="post">
-	{{ form.as_p }}
-	{% csrf_token %}
-	<p><input type="submit" value="Log in"></p>
-	</form>
+<h1>Logged out</h1>
+<p>
+You have been successfully logged out.
+You can <a href="{% url 'account:login' %}">log-in again</a>.
+</p>
 {% endblock %}
